@@ -93,3 +93,4 @@ Or using powershell:
 ```powershell
 .\run_marking.bat
 ```
+> Note: This may take a while the first time, but then should be much faster afterwards!
