@@ -14,7 +14,7 @@ Go to: [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/) 
 
 Please note that we expect that you have installed Docker to `C:\Program Files`. If you have not then a small change needs to be made to the `run_marking.bat` script (detailed later).
 
-If all else fails, you can download a [virtual machine](https://www.virtualbox.org/) along with a linux OS of your choice and follow the [linux install guide](###Linux Setup).
+If all else fails, you can download a [virtual machine](https://www.virtualbox.org/) along with a linux OS of your choice and follow the linux install guide.
 
 ### Mac Setup
 
