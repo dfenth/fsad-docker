@@ -13,7 +13,7 @@ There are two options! Either download a zip file containing all the code (click
 
 ---
 
-Go to: [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/) and follow the download instructions, specifically make sure virtualisation is enabled (it should tell you if virtualisation is enabled in the task manager (where you view CPU performance etc.)). If virtualisation isn't enabled there should be an option in the computer BIOS (lots of support is available from the internet for this).
+Go to: [Get Docker](https://docs.docker.com/get-docker/) and follow the download instructions, specifically make sure virtualisation is enabled (it should tell you if virtualisation is enabled in the task manager (where you view CPU performance etc.)). If virtualisation isn't enabled there should be an option in the computer BIOS (lots of support is available from the internet for this).
 
 Please note that we expect that you have installed Docker to `C:\Program Files`. If you have not then a small change needs to be made to the `run_marking.bat` script (detailed later).
 
@@ -27,7 +27,7 @@ With macos you have a few options!
 
 #### Option 1 GUI:
 
-You can download the GUI application using: [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/) (be careful of the achitecture).
+You can download the GUI application using: [Get Docker](https://docs.docker.com/get-docker/) (be careful of the achitecture).
 
 #### Option 2: Brew
 
@@ -45,7 +45,7 @@ With linux you have a few options!
 
 #### Option 1 GUI:
 
-You can download the GUI application using: [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/).
+You can download the GUI application using: [Get Docker](https://docs.docker.com/get-docker/).
 
 #### Option 2: Package manager
 
