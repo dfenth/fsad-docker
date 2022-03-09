@@ -1,4 +1,6 @@
 #!/bin/bash
+chmod 777 Assignment1
+
 cd Assignment1
 
 # Get all java files in the Assignment1 directory
