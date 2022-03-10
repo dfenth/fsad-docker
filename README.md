@@ -63,7 +63,7 @@ sudo apt-get install docker.io
 
 If you use snap, the following command will help:
 
-```
+```bash
 sudo snap install docker
 ```
 
