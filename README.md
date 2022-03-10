@@ -34,7 +34,7 @@ You can download the GUI application using: [Get Docker](https://docs.docker.com
 If you use the Brew package manager you can install docker with the command:
 
 ```bash
-brew install docker
+brew install --cask docker
 ```
 
 ### Linux Setup

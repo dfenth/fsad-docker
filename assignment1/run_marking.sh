@@ -5,10 +5,11 @@
 if [[ "$OSTYPE" != "darwin"* ]]; then
     systemctl start docker
 else
-    echo "macos - skipping systemctl!"
+    open -g -a docker
 fi
 
 docker build -t a1docker - < FSADA1Docker
 docker run --rm -v "$PWD/Test:/marking" a1docker
 
-systemctl stop docker
+if [[ "$OSTYPE" != "darwin"* ]]; then
+    systemctl stop docker
