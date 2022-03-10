@@ -7,7 +7,7 @@ In FSAD we will use docker containers to allow you to test your code on *"our ma
 Below are setup instructions for various different operating systems.
 
 ### Using this repository
-There are two options! Either download a zip file containing all the code (click the green code button), or [install git](https://github.com/git-guides/install-git), then in navigate to a location to store the code and (in terminal/comamnd line) type `git clone https://github.com/dfenth/fsad-docker.git`. The advantage of using git is that if we make any updates to the code, you can just type `git pull` to update the code. If you download the zip file, you'll need to re-download for each update.
+There are two options! Either download a zip file containing all the code (click the green code button), or [install git](https://github.com/git-guides/install-git) (make sure to place it on your computer, not a network drive like OneDrive), then in navigate to a location to store the code and (in terminal/comamnd line) type `git clone https://github.com/dfenth/fsad-docker.git`. The advantage of using git is that if we make any updates to the code, you can just type `git pull` to update the code. If you download the zip file, you'll need to re-download for each update.
 
 ### Windows Setup
 
