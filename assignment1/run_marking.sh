@@ -5,6 +5,6 @@
 systemctl start docker
 
 docker build -t a1docker - < FSADA1Docker
-docker run --rm -v $PWD/Test:/marking a1docker
+docker run --rm -v "$PWD/Test:/marking" a1docker
 
 systemctl stop docker
