@@ -1,15 +1,15 @@
 import sys, glob, subprocess, re
 import os
-#import termcolor
+import termcolor
 
 def marking_error(s):
-    #termcolor.cprint("ERROR :: " + s, 'red')
-    print("ERROR :: "+s)
+    termcolor.cprint("ERROR :: " + s, 'red')
     print("Stopping marking process")
+    # attempt to remove any Assignment1 directories
+    sp_ret = subprocess.run(["rm", "-rf", "Assignment1"])
     exit()
 
-#print_success = lambda x: termcolor.cprint(x, 'green')
-print_success = lambda x: print(x)
+print_success = lambda x: termcolor.cprint(x, 'green')
 
 def load_file(fname):
     with open(fname, "r") as f:
@@ -56,7 +56,10 @@ if sp_ret.returncode < 0:
     marking_error("Execution of java_compile.sh failed - {}".format(sp_ret.stderr))
 
 print_success("Execution of java_compile.sh succeeded")
-print("Results:\n{}\n{}".format(sp_ret.stdout.decode('ascii'), sp_ret.stderr.decode('ascii')))
+if sp_ret.stderr.decode('ascii') == "":
+    print_success("No compile errors")
+else:
+    marking_error("Compile errors:\n{}".format(sp_ret.stderr.decode('ascii')))
 
 # Remove Assignment1 directory after all tests are done
 sp_ret = subprocess.run(["rm", "-rf", "Assignment1"])
@@ -64,6 +67,4 @@ if sp_ret.returncode != 0:
     marking_error("Removal of Assignment1 directory failed")
 
 print_success("Assignment1 directory successfully removed")
-
-
 print_success("=== Marking complete ===")

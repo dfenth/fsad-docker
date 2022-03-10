@@ -1,8 +1,7 @@
 # Docker container to run the marking in
 #
 # Creating and running the container:
-# docker build -t uirobot - < UIRobotDocker
-# docker run --rm -v x11tmp:/tmp/.X11-unix -v $PWD/Assignment1:/marking uirobot
+# docker run --rm -v $PWD/Assignment1:/marking a1docker
 
 FROM debian:bookworm-slim
 LABEL maintainer "Daniel Fentham <dxf209@cs.bham.ac.uk>"
@@ -12,11 +11,13 @@ RUN apt-get update && apt-get install -y \
 	openjdk-17-jdk 		\
 	wget			\
 	p7zip-full		\
-	python3
+	python3                 \
+        python3-pip
 
 # Download and unzip javafx
 RUN ["wget", "-q", "https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-sdk.zip", "-P", "/tmp"]
 RUN ["7z", "x", "/tmp/openjfx-17.0.2_linux-x64_bin-sdk.zip", "-o/tmp"]
+RUN ["pip", "install", "termcolor"] # This really should be in a python environment!
 
 RUN groupadd -r student && useradd -r -g student student \
 	&& mkdir /marking \
