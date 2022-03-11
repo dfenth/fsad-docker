@@ -7,6 +7,7 @@ In FSAD we will use docker containers to allow you to test your code on *"our ma
 Below are setup instructions for various different operating systems.
 
 ### Using this repository
+
 There are two options! Either download a zip file containing all the code (click the green code button), or [install git](https://github.com/git-guides/install-git) (make sure to place it on your computer, not a network drive like OneDrive), then in navigate to a location to store the code and (in terminal/comamnd line) type `git clone https://github.com/dfenth/fsad-docker.git`. The advantage of using git is that if we make any updates to the code, you can just type `git pull` to update the code. If you download the zip file, you'll need to re-download for each update.
 
 ### Windows Setup
@@ -25,7 +26,7 @@ If all else fails, you can download a [virtual machine](https://www.virtualbox.o
 
 With macos you have a few options!
 
-#### Option 1 GUI:
+#### Option 1: GUI
 
 You can download the GUI application using: [Get Docker](https://docs.docker.com/get-docker/) (be careful of the achitecture).
 
@@ -43,18 +44,27 @@ brew install --cask docker
 
 With linux you have a few options!
 
-#### Option 1 GUI:
+#### Option 1: Official Way
 
-You can download the GUI application using: [Get Docker](https://docs.docker.com/get-docker/).
+Follow the instruction at [Install Docker Engine](https://docs.docker.com/engine/install/).
 
-#### Option 2: Package manager
+#### Option 2: Package Manager
 
-If you use any kind of package manager you can install docker with the command (replacing `apt` with your particular package manager):
+If you use any kind of package manager you can install docker with the command (replacing `apt-get` with your particular package manager):
 
 ```bash
 sudo apt-get update
+sudo apt-get install docker.io
+```
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+> Note: The package name of `docker` could be vary.
+
+#### Option 3: Snap
+
+If you use snap, the following command will help:
+
+```bash
+sudo snap install docker
 ```
 
 ### Running the container
@@ -63,7 +73,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 Navigate to the appropriate folder for the assignment and place your zip file (named as specified in the assignment document) in the `Test` folder and open the directory in the terminal/command line (the directory which contains `Test`) then:
 
-**Linux/macos:**
+**Linux/macOS:**
 
 ```bash
 sudo sh run_marking.sh
