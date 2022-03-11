@@ -50,6 +50,11 @@ if not(os.path.exists("Assignment1") and os.path.exists("Assignment1/src")):
 
 print_success("Required directories (Assignment1 and Assignment1/src) exist")
 
+# Convert DOS line endings to unix
+sp_ret = subprocess.run(["dos2unix", "java_compile.sh"], capture_output=True)
+if sp_ret.returncode < 0:
+    print("Error in dos2unix conversion - this is not a problem if the rest of the code executes!\n{}".format(sp_ret.stderr))
+
 # Compile and run java script (note: not javascript)
 sp_ret = subprocess.run(["sh", "java_compile.sh"], capture_output=True)
 if sp_ret.returncode < 0:

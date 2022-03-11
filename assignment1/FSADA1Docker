@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
 	wget			\
 	p7zip-full		\
 	python3                 \
-        python3-pip
+        python3-pip             \
+        dos2unix
+
 
 # Download and unzip javafx
 RUN ["wget", "-q", "https://download2.gluonhq.com/openjfx/17.0.2/openjfx-17.0.2_linux-x64_bin-sdk.zip", "-P", "/tmp"]
