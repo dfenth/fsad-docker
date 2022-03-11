@@ -13,3 +13,4 @@ docker run --rm -v "$PWD/Test:/marking" a1docker
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
     systemctl stop docker
+fi
